@@ -13,7 +13,7 @@ import java.util.*;
 @Service
 public class OpenAIService {
 
-    private final String API_KEY = "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";
+    private final String API_KEY = System.getenv().getOrDefault("OPENAI_API_KEY", "****");
     private final String API_URL = "https://api.openai.com/v1/chat/completions";
     private final String AI_MODEL = "gpt-4"; // Changed to GPT-4 for better reasoning
     
